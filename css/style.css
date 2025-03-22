@@ -4,10 +4,108 @@
     padding-right: 10px;
 }
 
+/* Comment styles */
 .comment-item {
-    border-bottom: 1px solid #eee;
-    padding: 15px 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    transition: opacity 0.5s ease, background-color 0.3s ease;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85em;
+}
+
+.comment-content {
     margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+/* New comment animation */
+.new-comment {
+    animation: highlight 2s ease;
+}
+
+@keyframes highlight {
+    0% { background-color: #fff; }
+    50% { background-color: #e3f2fd; }
+    100% { background-color: #fff; }
+}
+
+/* Comment actions styling */
+.comment-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+/* Edit form styling */
+.edit-comment-form {
+    margin-bottom: 10px;
+}
+
+/* Delete animation */
+.fade-out {
+    opacity: 0;
+}
+
+/* No comments message */
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+/* Notification toggle button */
+.notification-toggle {
+    margin-bottom: 15px;
+}
+
+/* Success message */
+.alert {
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
 }
 
 .comment-item:last-child {
@@ -58,3 +156,3039 @@
     color: #6c757d;
     font-style: italic;
 }
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+}
+
+.comment-item:last-child {
+    border-bottom: none;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.comment-username {
+    font-weight: bold;
+    color: #0d6efd;
+}
+
+.comment-time {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.comment-content {
+    color: #212529;
+    line-height: 1.5;
+}
+
+.new-comment {
+    animation: highlightNew 2s ease-in-out;
+}
+
+@keyframes highlightNew {
+    0% {
+        background-color: rgba(13, 110, 253, 0.1);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+#loadingComments {
+    padding: 20px 0;
+}
+
+.no-comments {
+    text-align: center;
+    padding: 20px;
+    color: #6c757

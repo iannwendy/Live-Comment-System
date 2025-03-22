@@ -271,6 +271,21 @@ document.addEventListener('DOMContentLoaded', function() {
             minute: '2-digit'
         });
         
+        // Check if the comment belongs to the current user
+        const isCurrentUserComment = comment.username === document.querySelector('.card-header .me-3').textContent.replace('Xin chào, ', '');
+        
+        // Create action buttons HTML if the comment belongs to the current user
+        const actionButtons = isCurrentUserComment ? `
+            <div class="comment-actions">
+                <button class="btn btn-sm btn-outline-primary edit-comment" data-id="${comment.id}">
+                    <i class="bi bi-pencil"></i> Sửa
+                </button>
+                <button class="btn btn-sm btn-outline-danger delete-comment" data-id="${comment.id}">
+                    <i class="bi bi-trash"></i> Xóa
+                </button>
+            </div>
+        ` : '';
+        
         return `
             <div class="comment-item" data-id="${comment.id}">
                 <div class="comment-header">
@@ -278,6 +293,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <span class="comment-time">${formattedDate}</span>
                 </div>
                 <div class="comment-content">${escapeHtml(comment.content)}</div>
+                ${actionButtons}
             </div>
         `;
     }
