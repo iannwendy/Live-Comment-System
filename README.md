@@ -65,7 +65,6 @@ $password = 'your-password';
 
 ```
 ├── api/                  # API endpoints
-│   ├── add_comment.php       # Thêm bình luận (không cần đăng nhập)
 │   ├── add_comment_auth.php  # Thêm bình luận (yêu cầu đăng nhập)
 │   ├── change_password.php   # Thay đổi mật khẩu
 │   ├── config.php            # Cấu hình cơ sở dữ liệu
