@@ -16,11 +16,22 @@ document.addEventListener('DOMContentLoaded', function() {
     // Store the last comment ID to fetch only new comments
     let lastCommentId = 0;
     
+    // Variables for notification
+    let notificationPermission = false;
+    let previousCommentsCount = 0;
+    let notificationEnabled = true;
+    
     // Initialize: Load comments when page loads
     loadComments();
     
     // Set up polling to check for new comments every 5 seconds
     setInterval(loadComments, 5000);
+    
+    // Request notification permission
+    requestNotificationPermission();
+    
+    // Add notification toggle button to the UI
+    addNotificationToggle();
     
     // Handle comment form submission
     commentForm.addEventListener('submit', function(e) {
@@ -213,6 +224,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         // If this is the first load, replace the content
                         if (commentsArea.querySelector('.no-comments') || commentsArea.querySelector('#loadingComments')) {
                             commentsArea.innerHTML = newCommentsHtml;
+                            previousCommentsCount = data.comments.length;
                         } else {
                             // Otherwise, prepend new comments
                             commentsArea.insertAdjacentHTML('afterbegin', newCommentsHtml);
@@ -226,6 +238,15 @@ document.addEventListener('DOMContentLoaded', function() {
                                     comment.classList.add('seen');
                                 }, 2000);
                             });
+                            
+                            // Show notification for new comments if not the first load
+                            if (previousCommentsCount > 0 && notificationEnabled) {
+                                // Pass the first (newest) comment to the notification function
+                                showNotification(data.comments[0]);
+                            }
+                            
+                            // Update the previous comments count
+                            previousCommentsCount = data.comments.length;
                         }
                     }
                 } else {
@@ -276,5 +297,76 @@ document.addEventListener('DOMContentLoaded', function() {
             .replace(/>/g, "&gt;")
             .replace(/"/g, "&quot;")
             .replace(/'/g, "&#039;");
+    }
+    
+    // Function to request notification permission
+    function requestNotificationPermission() {
+        if (!('Notification' in window)) {
+            console.log('Trình duyệt này không hỗ trợ thông báo');
+            return;
+        }
+        
+        if (Notification.permission === 'granted') {
+            notificationPermission = true;
+        } else if (Notification.permission !== 'denied') {
+            Notification.requestPermission().then(permission => {
+                if (permission === 'granted') {
+                    notificationPermission = true;
+                }
+            });
+        }
+    }
+    
+    // Function to show notification
+    function showNotification(comment) {
+        if (!notificationPermission) return;
+        
+        const notificationTitle = 'Bình luận mới';
+        const notificationOptions = {
+            body: `Có một bình luận mới từ "${comment.username}"
+Nội dung: ${comment.content.length > 50 ? comment.content.substring(0, 50) + '...' : comment.content}`,
+            icon: '/favicon.ico', // Thay đổi đường dẫn nếu có icon khác
+            tag: 'new-comment'
+        };
+        
+        const notification = new Notification(notificationTitle, notificationOptions);
+        
+        // Tự động đóng thông báo sau 5 giây
+        setTimeout(() => notification.close(), 5000);
+        
+        // Khi người dùng click vào thông báo
+        notification.onclick = function() {
+            window.focus();
+            notification.close();
+        };
+    }
+    
+    // Function to add notification toggle button
+    function addNotificationToggle() {
+        // Tạo nút toggle thông báo
+        const toggleButton = document.createElement('button');
+        toggleButton.className = 'btn btn-sm btn-outline-secondary notification-toggle';
+        toggleButton.innerHTML = notificationEnabled 
+            ? '<i class="bi bi-bell"></i> Tắt thông báo' 
+            : '<i class="bi bi-bell-slash"></i> Bật thông báo';
+        toggleButton.style.marginBottom = '10px';
+        
+        // Thêm sự kiện click
+        toggleButton.addEventListener('click', function() {
+            notificationEnabled = !notificationEnabled;
+            
+            // Cập nhật trạng thái nút
+            this.innerHTML = notificationEnabled 
+                ? '<i class="bi bi-bell"></i> Tắt thông báo' 
+                : '<i class="bi bi-bell-slash"></i> Bật thông báo';
+            
+            // Nếu bật thông báo, yêu cầu quyền
+            if (notificationEnabled && !notificationPermission) {
+                requestNotificationPermission();
+            }
+        });
+        
+        // Thêm nút vào trước khu vực bình luận
+        commentsArea.parentNode.insertBefore(toggleButton, commentsArea);
     }
 });
