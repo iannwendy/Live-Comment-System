@@ -68,6 +68,8 @@ $password = 'your-password';
 │   ├── add_comment_auth.php  # Thêm bình luận (yêu cầu đăng nhập)
 │   ├── change_password.php   # Thay đổi mật khẩu
 │   ├── config.php            # Cấu hình cơ sở dữ liệu
+│   ├── delete_comment.php    # Xóa bình luận
+│   ├── edit_comment.php      # Chỉnh sửa bình luận
 │   ├── get_comments.php      # Lấy danh sách bình luận
 │   ├── login.php             # Xử lý đăng nhập
 │   ├── logout.php            # Xử lý đăng xuất
