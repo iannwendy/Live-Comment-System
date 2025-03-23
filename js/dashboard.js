@@ -114,6 +114,12 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             if (data.success) {
                 showMessage(profileMessage, 'success', 'Cập nhật thông tin thành công!');
+                
+                // Update the username in the header
+                const headerUsername = document.querySelector('.me-3');
+                if (headerUsername) {
+                    headerUsername.textContent = 'Xin chào, ' + username;
+                }
             } else {
                 showMessage(profileMessage, 'error', 'Lỗi: ' + data.message);
             }

@@ -3,7 +3,7 @@
 $host = 'localhost';
 $dbname = 'livecmt_db';
 $username = 'root';
-$password = '';
+$password = 'Baominh2k5';
 
 // Create database connection
 try {
