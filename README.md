@@ -57,9 +57,11 @@ $password = 'your-password';
 - Sau khi đăng nhập, bạn sẽ được chuyển hướng đến trang Dashboard
 - Từ Dashboard, bạn có thể:
   - Đăng bình luận mới
+  - Nhận thông báo về bình luận mới
   - Xem các bình luận gần đây
   - Quản lý thông tin tài khoản
   - Thay đổi mật khẩu
+
 
 ## Cấu trúc dự án
 
