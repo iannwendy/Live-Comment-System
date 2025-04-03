@@ -23,7 +23,6 @@ Hệ thống bình luận trực tiếp là một ứng dụng web cho phép ng�
 2. Clone repository này vào thư mục `htdocs` của XAMPP:
    ```
    git clone https://github.com/iannwendy/Live-Comment-System.git
-   
 3. Khởi động Apache và MySQL từ XAMPP Control Panel
 4. Mở trình duyệt và truy cập: `http://localhost/livecmt`
 
