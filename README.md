@@ -8,7 +8,6 @@ Hệ thống bình luận trực tiếp là một ứng dụng web cho phép ng�
 - **Hệ thống tài khoản**: Đăng ký, đăng nhập và quản lý thông tin tài khoản
 - **Giao diện người dùng thân thiện**: Thiết kế responsive sử dụng Bootstrap 5
 - **Bảo mật**: Mật khẩu được mã hóa, xác thực người dùng an toàn
-- **Tự động tạo cơ sở dữ liệu**: Hệ thống tự động tạo cơ sở dữ liệu và bảng cần thiết
 
 ## Yêu cầu hệ thống
 
@@ -28,16 +27,22 @@ Hệ thống bình luận trực tiếp là một ứng dụng web cho phép ng�
 3. Khởi động Apache và MySQL từ XAMPP Control Panel
 4. Mở trình duyệt và truy cập: `http://localhost/livecmt`
 
-### Cấu hình cơ sở dữ liệu
+### Cài đặt cơ sở dữ liệu
 
-Mặc định, ứng dụng sẽ tự động tạo cơ sở dữ liệu và các bảng cần thiết. Nếu bạn muốn thay đổi thông tin kết nối cơ sở dữ liệu, hãy chỉnh sửa file `api/config.php`:
+1. Mở phpMyAdmin (http://localhost/phpmyadmin)
+2. Tạo cơ sở dữ liệu mới có tên `livecmt_db`
+3. Import file `db.sql` vào cơ sở dữ liệu vừa tạo
+4. Chỉnh sửa thông tin kết nối trong file `api/config.php`:
 
 ```php
 // Database configuration
 $host = 'localhost';
 $dbname = 'livecmt_db';
 $username = 'root';
-$password = 'your-password';
+// Trên Windows, mật khẩu mặc định là trống
+$password = '';
+// Trên MacOS, mật khẩu mặc định thường là 'root'
+// $password = 'root';
 ```
 
 ## Sử dụng
@@ -62,7 +67,6 @@ $password = 'your-password';
   - Quản lý thông tin tài khoản
   - Thay đổi mật khẩu
 
-
 ## Cấu trúc dự án
 
 ```
@@ -85,6 +89,7 @@ $password = 'your-password';
 ├── index.html           # Home page (non-authenticated users)
 ├── login.php            # Login page
 └── register.php         # Registration page
+└── db.sql               # Database file
 ```
 
 ## Bảo mật
